@@ -1,0 +1,4 @@
+#Fri Jan 31 02:41:02 IST 2020
+base.0=/home/sarbjyot/Music/athelet-platform/build/app/intermediates/dex/release/mergeDexRelease/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

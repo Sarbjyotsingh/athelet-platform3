@@ -1,0 +1,69 @@
+name: athlete_platform
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  carousel_slider: ^1.4.1
+  font_awesome_flutter: ^8.5.0
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+  - images/company.png
+  - images/center_card.jpg
+  - images/background_menu_bar.jpg
+  - images/detail_card.jpg
+  - images/person1.jpg
+  - images/person2.jpg
+  - images/public.png
+  - images/retired.png
+  - images/personal.png
+  - images/refree.png
+  - images/logo.png
+  - assets/images/volleyball.jpg
+  - assets/images/potrait1.jpg
+  - assets/images/potrait2.jpg
+  - assets/images/sample1.jpg
+  - assets/images/sample2.jpg
+  - assets/images/sample3.jpg
+  - assets/images/volleyball2.jpg
+  - images/cancel.png
+  - images/avatar.png
+  - images/drive.png
+  - images/signupprofile.png
+  - images/date_cal.png
+  - images/circle_add.png
+  - images/dots.png
+  - images/pic.jpg
+
+  fonts:
+  - family: Muli Bold
+    fonts:
+    - asset: fonts/Muli-Black.ttf
+
+  - family: Muli Regular
+    fonts:
+    - asset: fonts/Muli-Regular.ttf
+  - family: Muli
+    fonts:
+      - asset: fonts/Muli-Black.ttf
+        weight: 900
+      - asset: fonts/Muli-Bold.ttf
+        weight: 700
+      - asset: fonts/Muli-Regular.ttf
