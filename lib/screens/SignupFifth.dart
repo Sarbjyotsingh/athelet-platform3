@@ -1,5 +1,5 @@
 import 'package:athlete_platform/screens/SignupSixth.dart';
-import 'package:athlete_platform/widgets/circular_button_with_text.dart';
+import 'package:athlete_platform/widgets/circular_raised_button_with_text.dart';
 import 'package:athlete_platform/widgets/circular_text_form_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +25,7 @@ class _SignUpFifthState extends State<SignUpFifth> {
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      "Complete coach profile",
+                      "Your Work Profile",
                       style: TextStyle(
                         color: Color(0xFF555555),
                         fontSize: 22,
@@ -35,37 +35,21 @@ class _SignUpFifthState extends State<SignUpFifth> {
                     ),
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 10.0),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Don't miss your opportunity.",
-                      style: TextStyle(
-                        color: Colors.grey.shade700,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 15.0,
-                        fontFamily: 'Muli',
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Sign in to stay updated on",
-                      style: TextStyle(
-                        color: Colors.grey.shade700,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 15.0,
-                        fontFamily: 'Muli',
-                      ),
-                    ),
-                  ),
-                ),
                 SizedBox(
                   height: 50,
+                ),
+                Container(
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "Position Title",
+                      style: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontSize: 16.0,
+                        fontFamily: 'Muli Regular',
+                      ),
+                    ),
+                  ),
                 ),
                 CircularTextFormField(
                   hintText: 'Position Title',
@@ -78,6 +62,19 @@ class _SignUpFifthState extends State<SignUpFifth> {
                 SizedBox(
                   height: 30,
                 ),
+                Container(
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "Coaching Level",
+                      style: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontSize: 16.0,
+                        fontFamily: 'Muli Regular',
+                      ),
+                    ),
+                  ),
+                ),
                 CircularTextFormField(
                   hintText: 'Coaching Level',
                   borderColor: Colors.grey,
@@ -87,19 +84,19 @@ class _SignUpFifthState extends State<SignUpFifth> {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 40,
                 ),
                 Align(
-                  alignment: Alignment.topRight,
-                  child: CircularButtonWithText(
+                  alignment: Alignment.centerRight,
+                  child: CircularRaisedButtonWithText(
                     padding:
-                        EdgeInsets.only(top: 2, bottom: 2, left: 2, right: 2),
+                        EdgeInsets.only(top: 8, bottom: 8, left: 30, right: 30),
                     text: 'Next',
                     textColor: Colors.white,
                     buttonColor: Colors.black,
                     borderColor: Colors.black,
                     textStyle: TextStyle(
-                      fontSize: 20.0,
+                      fontSize: 18.0,
                       fontFamily: 'Muli Regular',
                       color: Colors.white,
                     ),

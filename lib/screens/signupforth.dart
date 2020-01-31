@@ -1,5 +1,5 @@
 import 'package:athlete_platform/screens/SignupFifth.dart';
-import 'package:athlete_platform/widgets/circular_button_with_text.dart';
+import 'package:athlete_platform/widgets/circular_raised_button_with_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -42,22 +42,7 @@ class _SignUpForthState extends State<SignUpForth> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "Don't miss your opportunity.",
-                      style: TextStyle(
-                        color: Colors.grey.shade700,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 15.0,
-                        fontFamily: 'Muli',
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 30),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Sign in to stay updated on",
+                      "Only images with a size lower than 3MB are allowed.",
                       style: TextStyle(
                         color: Colors.grey.shade700,
                         fontWeight: FontWeight.w700,
@@ -72,16 +57,16 @@ class _SignUpForthState extends State<SignUpForth> {
                 ),
                 Image.asset('images/signupprofile.png'),
                 Align(
-                  alignment: Alignment.topRight,
-                  child: CircularButtonWithText(
+                  alignment: Alignment.centerRight,
+                  child: CircularRaisedButtonWithText(
                     padding:
-                        EdgeInsets.only(top: 2, bottom: 2, left: 5, right: 5),
+                        EdgeInsets.only(top: 8, bottom: 8, left: 30, right: 30),
                     text: 'Next',
                     textColor: Colors.white,
                     buttonColor: Colors.black,
                     borderColor: Colors.black,
                     textStyle: TextStyle(
-                      fontSize: 20.0,
+                      fontSize: 18.0,
                       fontFamily: 'Muli Regular',
                       color: Colors.white,
                     ),

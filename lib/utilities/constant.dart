@@ -11,7 +11,7 @@ const kHeadingTextStyle = TextStyle(
 
 const kDescriptionTextStyle = TextStyle(
   fontFamily: 'Muli',
-  fontSize: 16.0,
+  fontSize: 14.5,
   wordSpacing: 2,
   letterSpacing: 2,
   color: Colors.white,
@@ -61,7 +61,7 @@ final List<Widget> kMenuItem = [
         height: 50,
       ),
       Text(
-        'Tap into power of your coaching network to zero in on the athletes that are right for your program.',
+        'Create a free personal volleyball profile, connect with others and showcase your achievements to scouts.',
         textAlign: TextAlign.center,
         style: kDescriptionTextStyle,
       ),
@@ -77,7 +77,7 @@ final List<Widget> kMenuItem = [
         height: 50,
       ),
       Text(
-        'Tap into power of your coaching network to zero in on the athletes that are right for your program.',
+        'Create a coaching profile, connect with others & search for available athletes for your program.',
         textAlign: TextAlign.center,
         style: kDescriptionTextStyle,
       ),
@@ -86,14 +86,14 @@ final List<Widget> kMenuItem = [
   Column(
     children: <Widget>[
       Text(
-        'Refree',
+        'Referee',
         style: kHeadingTextStyle,
       ),
       SizedBox(
         height: 50,
       ),
       Text(
-        'Tap into power of your coaching network to zero in on the athletes that are right for your program.',
+        'Create a profile, connect, network, and communicate with the volleyball community and other referees.',
         textAlign: TextAlign.center,
         style: kDescriptionTextStyle,
       ),
@@ -109,7 +109,7 @@ final List<Widget> kMenuItem = [
         height: 50,
       ),
       Text(
-        'Tap into power of your coaching network to zero in on the athletes that are right for your program.',
+        'Create your own Business page for profiling your Association, Institute, or Club and post information to  all followers.',
         textAlign: TextAlign.center,
         style: kDescriptionTextStyle,
       ),
@@ -125,7 +125,7 @@ final List<Widget> kMenuItem = [
         height: 50,
       ),
       Text(
-        'Tap into power of your coaching network to zero in on the athletes that are right for your program.',
+        'Create a profile of volleyball achievements, connect with past teammates and stay linked to the volleyball community.',
         textAlign: TextAlign.center,
         style: kDescriptionTextStyle,
       ),

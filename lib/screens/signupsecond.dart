@@ -39,36 +39,7 @@ class _SignUpSecondState extends State<SignUpSecond> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 10.0),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        "Don't miss your opportunity.",
-                        style: TextStyle(
-                          color: Colors.grey.shade700,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 15.0,
-                          fontFamily: 'Muli',
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(bottom: 30),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        "Sign in to stay updated on",
-                        style: TextStyle(
-                          color: Colors.grey.shade700,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 15.0,
-                          fontFamily: 'Muli',
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
+                    padding: EdgeInsets.only(top: 30),
                     child: Column(
                       children: <Widget>[
                         Card(
@@ -96,7 +67,7 @@ class _SignUpSecondState extends State<SignUpSecond> {
                                             context, "signupthird");
                                       },
                                       subtitle: Text(
-                                        'Create your athelete Profile to be able to some awesome things',
+                                        'Create a free personal volleyball profile, connect with others and showcase your achievements to scouts',
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 16,
@@ -134,7 +105,7 @@ class _SignUpSecondState extends State<SignUpSecond> {
                                               fontFamily: 'Muli'),
                                         ),
                                         subtitle: Text(
-                                          'Create your athelete Profile to be able to some awesome things',
+                                          'Create a coaching profile, connect with others & search for available athletes for your program',
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 16,
@@ -166,14 +137,14 @@ class _SignUpSecondState extends State<SignUpSecond> {
                                         leading:
                                             Image.asset('images/personal.png'),
                                         title: Text(
-                                          'Administrator',
+                                          'Associations/Institutes/Clubs',
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 26,
                                               fontFamily: 'Muli'),
                                         ),
                                         subtitle: Text(
-                                          'Create your athelete Profile to be able to some awesome things',
+                                          'Create your own Business page for profiling your Association, Institute, or Club and post information to  all followers.',
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 16,
@@ -212,7 +183,7 @@ class _SignUpSecondState extends State<SignUpSecond> {
                                               fontFamily: 'Muli'),
                                         ),
                                         subtitle: Text(
-                                          'Create your athelete Profile to be able to some awesome things',
+                                          'Create a profile of volleyball achievements, connect with past teammates and stay linked to the volleyball community',
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 16,
@@ -244,14 +215,14 @@ class _SignUpSecondState extends State<SignUpSecond> {
                                         leading:
                                             Image.asset('images/refree.png'),
                                         title: Text(
-                                          'Refree',
+                                          'Referee',
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 26,
                                               fontFamily: 'Muli'),
                                         ),
                                         subtitle: Text(
-                                          'Create your athelete Profile to be able to some awesome things',
+                                          'Create a profile, connect, network, and communicate with the volleyball community and other referees',
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 16,

@@ -1,4 +1,4 @@
-import 'package:athlete_platform/widgets/circular_button_with_text.dart';
+import 'package:athlete_platform/widgets/circular_raised_button_with_text.dart';
 import 'package:athlete_platform/widgets/circular_text_form_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -29,36 +29,6 @@ class _SignUpSixthState extends State<SignUpSixth> {
                         color: Color(0xFF555555),
                         fontSize: 22,
                         fontWeight: FontWeight.w900,
-                        fontFamily: 'Muli',
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 10.0),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Don't miss your opportunity.",
-                      style: TextStyle(
-                        color: Colors.grey.shade700,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 15.0,
-                        fontFamily: 'Muli',
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 30),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Sign in to stay updated on",
-                      style: TextStyle(
-                        color: Colors.grey.shade700,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 15.0,
                         fontFamily: 'Muli',
                       ),
                     ),
@@ -119,7 +89,7 @@ class _SignUpSixthState extends State<SignUpSixth> {
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      "Institute City",
+                      "Institute Province",
                       style: TextStyle(
                         color: Colors.grey.shade700,
                         fontSize: 16.0,
@@ -129,7 +99,7 @@ class _SignUpSixthState extends State<SignUpSixth> {
                   ),
                 ),
                 CircularTextFormField(
-                  hintText: 'Ex. Calgary',
+                  hintText: 'Ex. Alberta',
                   borderColor: Colors.grey,
                   textFieldColor: Colors.transparent,
                   hintTextStyle: TextStyle(
@@ -137,7 +107,20 @@ class _SignUpSixthState extends State<SignUpSixth> {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
+                ),
+                Container(
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "Gender Coached",
+                      style: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontSize: 16.0,
+                        fontFamily: 'Muli Regular',
+                      ),
+                    ),
+                  ),
                 ),
                 CircularTextFormField(
                   hintText: 'Gender Coached',
@@ -148,7 +131,20 @@ class _SignUpSixthState extends State<SignUpSixth> {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
+                ),
+                Container(
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "Enter Level",
+                      style: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontSize: 16.0,
+                        fontFamily: 'Muli Regular',
+                      ),
+                    ),
+                  ),
                 ),
                 CircularTextFormField(
                   hintText: 'Enter Level',
@@ -159,19 +155,19 @@ class _SignUpSixthState extends State<SignUpSixth> {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 40,
                 ),
                 Align(
-                  alignment: Alignment.topRight,
-                  child: CircularButtonWithText(
+                  alignment: Alignment.centerRight,
+                  child: CircularRaisedButtonWithText(
                     padding:
-                        EdgeInsets.only(top: 2, bottom: 2, left: 2, right: 2),
+                        EdgeInsets.only(top: 8, bottom: 8, left: 30, right: 30),
                     text: 'Submit',
                     textColor: Colors.white,
                     buttonColor: Colors.black,
                     borderColor: Colors.black,
                     textStyle: TextStyle(
-                      fontSize: 20.0,
+                      fontSize: 18.0,
                       fontFamily: 'Muli Regular',
                       color: Colors.white,
                     ),

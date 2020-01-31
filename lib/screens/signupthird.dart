@@ -1,5 +1,5 @@
 import 'package:athlete_platform/screens/signupforth.dart';
-import 'package:athlete_platform/widgets/circular_button_with_text.dart';
+import 'package:athlete_platform/widgets/circular_raised_button_with_text.dart';
 import 'package:athlete_platform/widgets/circular_text_form_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -29,41 +29,11 @@ class _SignUpThirdState extends State<SignUpThird> {
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      "Choose your profile type",
+                      "Tell us more about you",
                       style: TextStyle(
                         color: Color(0xFF555555),
                         fontSize: 22,
                         fontWeight: FontWeight.w900,
-                        fontFamily: 'Muli',
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 10.0),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Don't miss your opportunity.",
-                      style: TextStyle(
-                        color: Colors.grey.shade700,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 15.0,
-                        fontFamily: 'Muli',
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 30),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Sign in to stay updated on",
-                      style: TextStyle(
-                        color: Colors.grey.shade700,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 15.0,
                         fontFamily: 'Muli',
                       ),
                     ),
@@ -142,10 +112,23 @@ class _SignUpThirdState extends State<SignUpThird> {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
+                ),
+                Container(
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "Gender",
+                      style: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontSize: 16.0,
+                        fontFamily: 'Muli Regular',
+                      ),
+                    ),
+                  ),
                 ),
                 CircularTextFormField(
-                  hintText: 'Male',
+                  hintText: 'Gender',
                   borderColor: Colors.grey,
                   textFieldColor: Colors.transparent,
                   hintTextStyle: TextStyle(
@@ -153,20 +136,21 @@ class _SignUpThirdState extends State<SignUpThird> {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 40,
                 ),
                 Align(
-                  alignment: Alignment.topRight,
-                  child: CircularButtonWithText(
-                    padding:
-                        EdgeInsets.only(top: 2, bottom: 2, left: 2, right: 2),
+                  alignment: Alignment.centerRight,
+                  child: CircularRaisedButtonWithText(
+                    padding: EdgeInsets.only(
+                        top: 10, bottom: 10, left: 35, right: 35),
                     text: 'Next',
                     textColor: Colors.white,
                     buttonColor: Colors.black,
                     borderColor: Colors.black,
                     textStyle: TextStyle(
-                      fontSize: 20.0,
-                      fontFamily: 'Muli Regular',
+                      fontSize: 15.0,
+                      fontFamily: 'Muli',
+                      fontWeight: FontWeight.w700,
                       color: Colors.white,
                     ),
                     onPressed: () {
@@ -176,8 +160,6 @@ class _SignUpThirdState extends State<SignUpThird> {
                 ),
               ],
             ),
-            // Center is a layout widget. It takes a single child and positions it
-            // in the middle of the parent.
           ),
         ),
       ),

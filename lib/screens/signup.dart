@@ -1,5 +1,5 @@
 import 'package:athlete_platform/screens/signupsecond.dart';
-import 'package:athlete_platform/widgets/circular_button_with_text.dart';
+import 'package:athlete_platform/widgets/circular_raised_button_with_text.dart';
 import 'package:athlete_platform/widgets/circular_text_form_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,184 +19,275 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color(0xffffffff),
-        body: SingleChildScrollView(
-          child: Container(
-            margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
-            child: Column(
-              children: <Widget>[
-                Container(
-                  margin: const EdgeInsets.only(top: 50.0),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Join Now",
-                      style: TextStyle(
-                        color: Color(0xFF555555),
-                        fontSize: 30,
-                        fontWeight: FontWeight.w900,
-                        fontFamily: 'Muli',
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(top: 10.0, bottom: 10.0),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Don't miss your opportunity. Sign in to stay updated on",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.grey.shade600,
-                        fontSize: 14.0,
-                        fontFamily: 'Muli',
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 40,
-                ),
-                CircularTextFormField(
-                  hintText: 'Ex. John Deo',
-                  borderColor: Colors.grey,
-                  textFieldColor: Colors.transparent,
-                  hintTextStyle: TextStyle(
-                    fontFamily: 'Muli',
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                CircularTextFormField(
-                  hintText: 'johndeo@gmail.com',
-                  borderColor: Colors.grey,
-                  textFieldColor: Colors.transparent,
-                  hintTextStyle: TextStyle(
-                    fontFamily: 'Muli',
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                CircularTextFormField(
-                  hintText: 'DOB: DD-MM-YY',
-                  borderColor: Colors.grey,
-                  textFieldColor: Colors.transparent,
-                  hintTextStyle: TextStyle(
-                    fontFamily: 'Muli',
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                CircularTextFormField(
-                  hintText: 'Password',
-                  borderColor: Colors.grey,
-                  textFieldColor: Colors.transparent,
-                  hintTextStyle: TextStyle(
-                    fontFamily: 'Muli',
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Align(
-                  alignment: Alignment.topRight,
-                  child: CircularButtonWithText(
-                    padding: EdgeInsets.only(top: 2, bottom: 2),
-                    text: 'Continue',
-                    textColor: Colors.white,
-                    buttonColor: Colors.black,
-                    borderColor: Colors.black,
-                    textStyle: TextStyle(
-                      fontSize: 20.0,
-                      fontFamily: 'Muli Regular',
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      Navigator.pushNamed(context, SignUpSecond.id);
-                    },
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 30.0, bottom: 10.0),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Or sign up using",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18.0,
-                          fontFamily: 'Muli Regular'),
-                    ),
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    CircularButtonWithText(
-                      padding: EdgeInsets.only(top: 2, bottom: 2),
-                      text: 'Facebook',
-                      textColor: Colors.white,
-                      buttonColor: Colors.indigo,
-                      borderColor: Colors.indigo,
-                      textStyle: TextStyle(
-                        fontSize: 20.0,
-                        fontFamily: 'Muli Regular',
-                        color: Colors.white,
-                      ),
-                      onPressed: () {},
-                    ),
-                    CircularButtonWithText(
-                      padding: EdgeInsets.only(
-                          left: 15, right: 15, top: 2, bottom: 2),
-                      text: 'Google',
-                      textColor: Colors.white,
-                      buttonColor: Colors.red,
-                      borderColor: Colors.red,
-                      textStyle: TextStyle(
-                        fontSize: 20.0,
-                        fontFamily: 'Muli Regular',
-                        color: Colors.white,
-                      ),
-                      onPressed: () {},
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 50,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      'Dont have an account?',
-                      style: TextStyle(color: Colors.grey, fontSize: 17),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    FlatButton(
-                      color: Colors.grey.shade600,
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Container(
+              margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    margin: const EdgeInsets.only(top: 50.0),
+                    child: Align(
+                      alignment: Alignment.center,
                       child: Text(
-                        'Sign In',
+                        "Join Now",
                         style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
+                          color: Color(0xFF555555),
+                          fontSize: 30,
+                          fontWeight: FontWeight.w900,
+                          fontFamily: 'Muli',
                         ),
                       ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10.0),
+                    child: Text(
+                      "Don't miss your opportunity.",
+                      style: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 15.0,
+                        fontFamily: 'Muli',
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 30),
+                    child: Text(
+                      "Join now to Athlete Platform and be a part of this huge community",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 15.0,
+                        fontFamily: 'Muli',
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  Container(
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        "Name",
+                        style: TextStyle(
+                          color: Colors.grey.shade700,
+                          fontSize: 16.0,
+                          fontFamily: 'Muli Regular',
+                        ),
+                      ),
+                    ),
+                  ),
+                  CircularTextFormField(
+                    hintText: 'Ex. John Deo',
+                    borderColor: Colors.grey,
+                    textFieldColor: Colors.transparent,
+                    hintTextStyle: TextStyle(
+                      fontFamily: 'Muli',
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        "Email",
+                        style: TextStyle(
+                          color: Colors.grey.shade700,
+                          fontSize: 16.0,
+                          fontFamily: 'Muli Regular',
+                        ),
+                      ),
+                    ),
+                  ),
+                  CircularTextFormField(
+                    hintText: 'johndeo@gmail.com',
+                    borderColor: Colors.grey,
+                    textFieldColor: Colors.transparent,
+                    hintTextStyle: TextStyle(
+                      fontFamily: 'Muli',
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        "Date of Birth",
+                        style: TextStyle(
+                          color: Colors.grey.shade700,
+                          fontSize: 16.0,
+                          fontFamily: 'Muli Regular',
+                        ),
+                      ),
+                    ),
+                  ),
+                  CircularTextFormField(
+                    hintText: 'DOB: DD-MM-YY',
+                    borderColor: Colors.grey,
+                    textFieldColor: Colors.transparent,
+                    hintTextStyle: TextStyle(
+                      fontFamily: 'Muli',
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        "Password",
+                        style: TextStyle(
+                          color: Colors.grey.shade700,
+                          fontSize: 16.0,
+                          fontFamily: 'Muli Regular',
+                        ),
+                      ),
+                    ),
+                  ),
+                  CircularTextFormField(
+                    hintText: 'Password',
+                    borderColor: Colors.grey,
+                    textFieldColor: Colors.transparent,
+                    hintTextStyle: TextStyle(
+                      fontFamily: 'Muli',
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: CircularRaisedButtonWithText(
+                      padding: EdgeInsets.only(
+                          top: 8, bottom: 8, left: 20, right: 20),
+                      text: 'Continue',
+                      textColor: Colors.white,
+                      buttonColor: Colors.black,
+                      borderColor: Colors.black,
+                      textStyle: TextStyle(
+                        fontSize: 18.0,
+                        fontFamily: 'Muli Regular',
+                        color: Colors.white,
+                      ),
                       onPressed: () {
-                        Navigator.pop(context);
+                        Navigator.pushNamed(context, SignUpSecond.id);
                       },
                     ),
-                  ],
-                ),
-              ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30.0, bottom: 10.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                          color: Colors.grey,
+                          width: 50,
+                          height: 2,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 5, right: 5),
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Text(
+                              "Or sign in using",
+                              style: TextStyle(
+                                color: Colors.grey.shade700,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 15.0,
+                                fontFamily: 'Muli',
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          color: Colors.grey,
+                          width: 50,
+                          height: 2,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        CircularRaisedButtonWithText(
+                          padding: EdgeInsets.only(
+                              top: 12, bottom: 12, left: 30, right: 30),
+                          text: 'Facebook',
+                          textColor: Colors.white,
+                          buttonColor: Colors.indigo,
+                          borderColor: Colors.indigo,
+                          textStyle: TextStyle(
+                            fontSize: 15.0,
+                            fontFamily: 'Muli',
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                          ),
+                          onPressed: () {},
+                        ),
+                        CircularRaisedButtonWithText(
+                          padding: EdgeInsets.only(
+                              top: 12, bottom: 12, left: 40, right: 40),
+                          text: 'Google',
+                          textColor: Colors.white,
+                          buttonColor: Colors.red,
+                          borderColor: Colors.red,
+                          textStyle: TextStyle(
+                            fontSize: 15.0,
+                            fontFamily: 'Muli',
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'Already a member?',
+                        style: TextStyle(color: Colors.grey, fontSize: 17),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      FlatButton(
+                        color: Colors.grey.shade600,
+                        child: Text(
+                          'Sign In',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              // Center is a layout widget. It takes a single child and positions it
+              // in the middle of the parent.
             ),
-            // Center is a layout widget. It takes a single child and positions it
-            // in the middle of the parent.
           ),
         ));
   }

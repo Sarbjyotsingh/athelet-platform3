@@ -12,6 +12,7 @@ class MenuBar extends StatefulWidget {
 }
 
 class _MenuBarState extends State<MenuBar> {
+  String _buttonText = 'Skip';
   int _currentMenuPage = 0;
 
   void screenChange(int index) {}
@@ -24,7 +25,9 @@ class _MenuBarState extends State<MenuBar> {
         decoration: BoxDecoration(
           image: DecorationImage(
             colorFilter: new ColorFilter.mode(
-                Colors.black.withOpacity(0.7), BlendMode.srcOver),
+              Colors.black.withOpacity(0.7),
+              BlendMode.srcOver,
+            ),
             image: AssetImage('images/background_menu_bar.jpg'),
             fit: BoxFit.cover,
           ),
@@ -41,6 +44,11 @@ class _MenuBarState extends State<MenuBar> {
                   onPageChanged: (index) {
                     setState(() {
                       _currentMenuPage = index;
+                      if (_currentMenuPage == 4) {
+                        _buttonText = 'Continue';
+                      } else {
+                        _buttonText = 'Skip';
+                      }
                     });
                   },
                 ),
@@ -143,7 +151,7 @@ class _MenuBarState extends State<MenuBar> {
                     ),
                     FlatButton(
                       child: Text(
-                        'Skip',
+                        _buttonText,
                         style: TextStyle(color: Colors.white),
                       ),
                       onPressed: () {

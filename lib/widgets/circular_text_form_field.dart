@@ -16,7 +16,6 @@ class CircularTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 45,
       margin: EdgeInsets.only(top: 5),
       padding: EdgeInsets.only(left: 20, top: 0, bottom: 0, right: 20),
       decoration: BoxDecoration(

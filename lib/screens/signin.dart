@@ -1,8 +1,8 @@
 import 'package:athlete_platform/screens/signup.dart';
-import 'package:athlete_platform/widgets/circular_button_with_text.dart';
+import 'package:athlete_platform/widgets/circular_raised_button_with_text.dart';
 import 'package:athlete_platform/widgets/circular_text_form_field.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
   static const String id = 'signin';
@@ -30,9 +30,10 @@ class _SignInState extends State<SignIn> {
                     alignment: Alignment.center,
                     child: Text(
                       "Welcome Back",
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Color(0xFF555555),
-                        fontSize: 30,
+                        fontSize: 35,
                         fontWeight: FontWeight.w900,
                         fontFamily: 'Muli',
                       ),
@@ -40,22 +41,44 @@ class _SignInState extends State<SignIn> {
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 10.0, bottom: 10.0),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Don't miss your opportunity. Sign in to stay updated on",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18.0,
-                        fontFamily: 'Muli Regular',
-                      ),
+                  margin: EdgeInsets.only(top: 10.0),
+                  child: Text(
+                    "Don't miss your opportunity.",
+                    style: TextStyle(
+                      color: Colors.grey.shade700,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 15.0,
+                      fontFamily: 'Muli',
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 30),
+                  child: Text(
+                    "Sign in to stay updated on",
+                    style: TextStyle(
+                      color: Colors.grey.shade700,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 15.0,
+                      fontFamily: 'Muli',
                     ),
                   ),
                 ),
                 SizedBox(
                   height: 25,
+                ),
+                Container(
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "Email",
+                      style: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontSize: 16.0,
+                        fontFamily: 'Muli Regular',
+                      ),
+                    ),
+                  ),
                 ),
                 CircularTextFormField(
                   hintText: 'Email',
@@ -67,6 +90,19 @@ class _SignInState extends State<SignIn> {
                 ),
                 SizedBox(
                   height: 20,
+                ),
+                Container(
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "Password",
+                      style: TextStyle(
+                        color: Colors.grey.shade700,
+                        fontSize: 16.0,
+                        fontFamily: 'Muli Regular',
+                      ),
+                    ),
+                  ),
                 ),
                 CircularTextFormField(
                   hintText: 'Password',
@@ -92,67 +128,96 @@ class _SignInState extends State<SignIn> {
                   ),
                 ),
                 Align(
-                  alignment: Alignment.topRight,
-                  child: CircularButtonWithText(
-                    padding: EdgeInsets.only(top: 2, bottom: 2),
+                  alignment: Alignment.centerRight,
+                  child: CircularRaisedButtonWithText(
+                    padding: EdgeInsets.only(
+                        top: 10, bottom: 10, left: 30, right: 30),
                     text: 'Sign In',
                     textColor: Colors.white,
                     buttonColor: Colors.black,
                     borderColor: Colors.black,
                     textStyle: TextStyle(
-                      fontSize: 20.0,
-                      fontFamily: 'Muli Regular',
+                      fontSize: 15.0,
+                      fontFamily: 'Muli',
+                      fontWeight: FontWeight.w700,
                       color: Colors.white,
                     ),
                     onPressed: () {
-                      Navigator.pushNamed(context, SignUp.id);
+                      Navigator.pushNamed(context, 'feed');
                     },
                   ),
                 ),
-                Container(
-                  margin: const EdgeInsets.only(top: 30.0, bottom: 10.0),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Or sign in using",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18.0,
-                          fontFamily: 'Muli Regular'),
-                    ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30.0, bottom: 10.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Container(
+                        color: Colors.grey,
+                        width: 50,
+                        height: 2,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 5, right: 5),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Or sign in using",
+                            style: TextStyle(
+                              color: Colors.grey.shade700,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15.0,
+                              fontFamily: 'Muli',
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        color: Colors.grey,
+                        width: 50,
+                        height: 2,
+                      ),
+                    ],
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    CircularButtonWithText(
-                      padding: EdgeInsets.only(top: 2, bottom: 2),
-                      text: 'Facebook',
-                      textColor: Colors.white,
-                      buttonColor: Colors.indigo,
-                      borderColor: Colors.indigo,
-                      textStyle: TextStyle(
-                        fontSize: 20.0,
-                        fontFamily: 'Muli Regular',
-                        color: Colors.white,
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      CircularRaisedButtonWithText(
+                        padding: EdgeInsets.only(
+                            top: 12, bottom: 12, left: 30, right: 30),
+                        text: 'Facebook',
+                        textColor: Colors.white,
+                        buttonColor: Colors.indigo,
+                        borderColor: Colors.indigo,
+                        textStyle: TextStyle(
+                          fontSize: 15.0,
+                          fontFamily: 'Muli',
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {},
                       ),
-                      onPressed: () {},
-                    ),
-                    CircularButtonWithText(
-                      padding: EdgeInsets.only(
-                          left: 15, right: 15, top: 2, bottom: 2),
-                      text: 'Google',
-                      textColor: Colors.white,
-                      buttonColor: Colors.red,
-                      borderColor: Colors.red,
-                      textStyle: TextStyle(
-                        fontSize: 20.0,
-                        fontFamily: 'Muli Regular',
-                        color: Colors.white,
+                      CircularRaisedButtonWithText(
+                        padding: EdgeInsets.only(
+                            top: 12, bottom: 12, left: 40, right: 40),
+                        text: 'Google',
+                        textColor: Colors.white,
+                        buttonColor: Colors.red,
+                        borderColor: Colors.red,
+                        textStyle: TextStyle(
+                          fontSize: 15.0,
+                          fontFamily: 'Muli',
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {},
                       ),
-                      onPressed: () {},
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 SizedBox(
                   height: 50,

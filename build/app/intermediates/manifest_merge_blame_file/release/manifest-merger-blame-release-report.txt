@@ -1,14 +1,14 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.sarbjyotsingh.athlete_platform"
-4    android:versionCode="1"
+4    android:versionCode="4001"
 5    android:versionName="1.0.0" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml
+8-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="28" />
-9-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml
+9-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml
 10    <!--
 11     io.flutter.app.FlutterApplication is an android.app.Application that
 12         calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -17,38 +17,38 @@
 15         FlutterApplication and put your custom class here.
 16    -->
 17    <application
-17-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:8:5-29:19
+17-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:8:5-29:19
 18        android:name="io.flutter.app.FlutterApplication"
-18-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:9:9-57
+18-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:9:9-57
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 19-->[androidx.core:core:1.0.0] /home/sarbjyot/.gradle/caches/transforms-2/files-2.1/7faf2ad74a0b9932e38d86e684646e95/core-1.0.0/AndroidManifest.xml:22:18-86
 20        android:icon="@mipmap/ic_launcher"
-20-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:11:9-43
+20-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:11:9-43
 21        android:label="athlete_platform" >
-21-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:10:9-41
+21-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:10:9-41
 22        <activity
-22-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:12:9-23:20
+22-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:12:9-23:20
 23            android:name="com.sarbjyotsingh.athlete_platform.MainActivity"
-23-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:13:13-41
+23-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:13:13-41
 24            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-24-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:16:13-163
+24-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:16:13-163
 25            android:hardwareAccelerated="true"
-25-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:17:13-47
+25-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:17:13-47
 26            android:launchMode="singleTop"
-26-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:14:13-43
+26-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:14:13-43
 27            android:theme="@style/LaunchTheme"
-27-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:15:13-47
+27-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:15:13-47
 28            android:windowSoftInputMode="adjustResize" >
-28-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:18:13-55
+28-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:18:13-55
 29            <intent-filter>
-29-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:19:13-22:29
+29-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:19:13-22:29
 30                <action android:name="android.intent.action.MAIN" />
-30-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:20:17-68
-30-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:20:25-66
+30-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:20:17-68
+30-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:20:25-66
 31
 32                <category android:name="android.intent.category.LAUNCHER" />
-32-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:21:17-76
-32-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:21:27-74
+32-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:21:17-76
+32-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:21:27-74
 33            </intent-filter>
 34        </activity>
 35        <!--
@@ -56,11 +56,11 @@
 37             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
 38        -->
 39        <meta-data
-39-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:26:9-28:33
+39-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:26:9-28:33
 40            android:name="flutterEmbedding"
-40-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:27:13-44
+40-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:27:13-44
 41            android:value="2" />
-41-->/home/sarbjyot/Music/athelet-platform/android/app/src/main/AndroidManifest.xml:28:13-30
+41-->/home/sarbjyot/Desktop/athelet-platform3/android/app/src/main/AndroidManifest.xml:28:13-30
 42    </application>
 43
 44</manifest>

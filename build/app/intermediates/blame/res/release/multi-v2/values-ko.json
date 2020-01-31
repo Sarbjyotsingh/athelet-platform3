@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/sarbjyot/Music/athelet-platform/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-ko/values-ko.xml",
+            "outputFile": "/home/sarbjyot/Desktop/athelet-platform3/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-ko/values-ko.xml",
             "map": [
                 {
                     "source": "/home/sarbjyot/.gradle/caches/transforms-2/files-2.1/7faf2ad74a0b9932e38d86e684646e95/core-1.0.0/res/values-ko/values-ko.xml",
