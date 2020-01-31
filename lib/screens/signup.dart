@@ -1,4 +1,6 @@
 import 'package:athlete_platform/screens/signupsecond.dart';
+import 'package:athlete_platform/widgets/circular_date_time_picker.dart';
+import 'package:athlete_platform/widgets/circular_password_text_form_field.dart';
 import 'package:athlete_platform/widgets/circular_raised_button_with_text.dart';
 import 'package:athlete_platform/widgets/circular_text_form_field.dart';
 import 'package:flutter/cupertino.dart';
@@ -15,6 +17,10 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  Color _passwordIconColor = Colors.grey;
+  bool _toglePasswordIcon = true;
+  bool _hidePassword = true;
+  dynamic _dateTime = 'DOB: DD-YY-MM';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -129,13 +135,22 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                   ),
-                  CircularTextFormField(
-                    hintText: 'DOB: DD-MM-YY',
-                    borderColor: Colors.grey,
-                    textFieldColor: Colors.transparent,
-                    hintTextStyle: TextStyle(
-                      fontFamily: 'Muli',
-                    ),
+                  CircularDateTimePicker(
+                    date: _dateTime,
+                    onPressed: () {
+                      showDatePicker(
+                        context: context,
+                        initialDate: DateTime(1995),
+                        firstDate: DateTime(1990),
+                        lastDate: DateTime(2019),
+                      ).then((date) {
+                        setState(() {
+                          _dateTime = date != null
+                              ? '${date.day} - ${date.month} - ${date.year}'
+                              : _dateTime;
+                        });
+                      });
+                    },
                   ),
                   SizedBox(
                     height: 20,
@@ -153,13 +168,27 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                   ),
-                  CircularTextFormField(
+                  CircularPasswordTextFormField(
                     hintText: 'Password',
                     borderColor: Colors.grey,
                     textFieldColor: Colors.transparent,
                     hintTextStyle: TextStyle(
                       fontFamily: 'Muli',
                     ),
+                    obscureText: _hidePassword,
+                    iconColor: _passwordIconColor,
+                    onIconPressed: () {
+                      setState(() {
+                        if (_toglePasswordIcon) {
+                          _hidePassword = false;
+                          _passwordIconColor = Colors.black;
+                        } else {
+                          _hidePassword = true;
+                          _passwordIconColor = Colors.grey;
+                        }
+                        _toglePasswordIcon = !_toglePasswordIcon;
+                      });
+                    },
                   ),
                   SizedBox(
                     height: 20,

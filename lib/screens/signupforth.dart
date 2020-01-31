@@ -15,6 +15,52 @@ class SignUpForth extends StatefulWidget {
 class _SignUpForthState extends State<SignUpForth> {
   @override
   Widget build(BuildContext context) {
+    void _bottomSheet() {
+      showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return Container(
+            padding: EdgeInsets.all(10),
+            height: 140,
+            child: Column(
+              children: <Widget>[
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.camera,
+                        color: Colors.black,
+                      ),
+                      title: Text('Camera'),
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.image,
+                        color: Colors.black,
+                      ),
+                      title: Text('Gallery'),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      );
+    }
+
     return Scaffold(
       backgroundColor: Color(0xffffffff),
       body: SafeArea(
@@ -55,7 +101,10 @@ class _SignUpForthState extends State<SignUpForth> {
                 SizedBox(
                   height: 40,
                 ),
-                Image.asset('images/signupprofile.png'),
+                GestureDetector(
+                  onTap: _bottomSheet,
+                  child: Image.asset('images/signupprofile.png'),
+                ),
                 Align(
                   alignment: Alignment.centerRight,
                   child: CircularRaisedButtonWithText(

@@ -1,3 +1,4 @@
+import 'package:athlete_platform/widgets/circular_drop_down_menu.dart';
 import 'package:athlete_platform/widgets/circular_raised_button_with_text.dart';
 import 'package:athlete_platform/widgets/circular_text_form_field.dart';
 import 'package:flutter/cupertino.dart';
@@ -10,6 +11,9 @@ class SignUpSixth extends StatefulWidget {
 }
 
 class _SignUpSixthState extends State<SignUpSixth> {
+  String _genderCoached = 'Select Gender Coached';
+  String _selectedLevel = 'Enter Level';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -122,13 +126,29 @@ class _SignUpSixthState extends State<SignUpSixth> {
                     ),
                   ),
                 ),
-                CircularTextFormField(
-                  hintText: 'Gender Coached',
-                  borderColor: Colors.grey,
-                  textFieldColor: Colors.transparent,
-                  hintTextStyle: TextStyle(
-                    fontFamily: 'Muli',
-                  ),
+                CircularDropDownMenu(
+                  dropDownMenuItem: [
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('Male'),
+                      ),
+                      value: 'Male',
+                    ),
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('Female'),
+                      ),
+                      value: 'Female',
+                    ),
+                  ],
+                  onChanged: (value) {
+                    setState(() {
+                      _genderCoached = value;
+                    });
+                  },
+                  hintText: _genderCoached,
                 ),
                 SizedBox(
                   height: 20,
@@ -146,13 +166,57 @@ class _SignUpSixthState extends State<SignUpSixth> {
                     ),
                   ),
                 ),
-                CircularTextFormField(
-                  hintText: 'Enter Level',
-                  borderColor: Colors.grey,
-                  textFieldColor: Colors.transparent,
-                  hintTextStyle: TextStyle(
-                    fontFamily: 'Muli',
-                  ),
+                CircularDropDownMenu(
+                  dropDownMenuItem: [
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('U13'),
+                      ),
+                      value: 'U13',
+                    ),
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('U14'),
+                      ),
+                      value: 'U14',
+                    ),
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('U15'),
+                      ),
+                      value: 'U15',
+                    ),
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('U16'),
+                      ),
+                      value: 'U16',
+                    ),
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('U17'),
+                      ),
+                      value: 'U17',
+                    ),
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('U18'),
+                      ),
+                      value: 'U18',
+                    ),
+                  ],
+                  onChanged: (value) {
+                    setState(() {
+                      _selectedLevel = value;
+                    });
+                  },
+                  hintText: _selectedLevel,
                 ),
                 SizedBox(
                   height: 40,

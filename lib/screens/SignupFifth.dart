@@ -1,6 +1,6 @@
 import 'package:athlete_platform/screens/SignupSixth.dart';
+import 'package:athlete_platform/widgets/circular_drop_down_menu.dart';
 import 'package:athlete_platform/widgets/circular_raised_button_with_text.dart';
-import 'package:athlete_platform/widgets/circular_text_form_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +11,8 @@ class SignUpFifth extends StatefulWidget {
 }
 
 class _SignUpFifthState extends State<SignUpFifth> {
+  String _positionTitle = 'Select Position Title';
+  String _coachingLevel = 'Coaching Level';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +44,7 @@ class _SignUpFifthState extends State<SignUpFifth> {
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      "Position Title",
+                      "Selct Position Title",
                       style: TextStyle(
                         color: Colors.grey.shade700,
                         fontSize: 16.0,
@@ -51,13 +53,29 @@ class _SignUpFifthState extends State<SignUpFifth> {
                     ),
                   ),
                 ),
-                CircularTextFormField(
-                  hintText: 'Position Title',
-                  borderColor: Colors.grey,
-                  textFieldColor: Colors.transparent,
-                  hintTextStyle: TextStyle(
-                    fontFamily: 'Muli',
-                  ),
+                CircularDropDownMenu(
+                  dropDownMenuItem: [
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('Head Coach/Recruiter'),
+                      ),
+                      value: 'Head Coach/Recruiter',
+                    ),
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('Assistant Coach'),
+                      ),
+                      value: 'Assistant Coach',
+                    ),
+                  ],
+                  onChanged: (value) {
+                    setState(() {
+                      _positionTitle = value;
+                    });
+                  },
+                  hintText: _positionTitle,
                 ),
                 SizedBox(
                   height: 30,
@@ -75,13 +93,36 @@ class _SignUpFifthState extends State<SignUpFifth> {
                     ),
                   ),
                 ),
-                CircularTextFormField(
-                  hintText: 'Coaching Level',
-                  borderColor: Colors.grey,
-                  textFieldColor: Colors.transparent,
-                  hintTextStyle: TextStyle(
-                    fontFamily: 'Muli',
-                  ),
+                CircularDropDownMenu(
+                  dropDownMenuItem: [
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('School'),
+                      ),
+                      value: 'School',
+                    ),
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('Club'),
+                      ),
+                      value: 'Club',
+                    ),
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('Institute'),
+                      ),
+                      value: 'Institute',
+                    ),
+                  ],
+                  onChanged: (value) {
+                    setState(() {
+                      _coachingLevel = value;
+                    });
+                  },
+                  hintText: _coachingLevel,
                 ),
                 SizedBox(
                   height: 40,

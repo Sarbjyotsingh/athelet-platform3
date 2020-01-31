@@ -1,4 +1,5 @@
 import 'package:athlete_platform/screens/signupforth.dart';
+import 'package:athlete_platform/widgets/circular_drop_down_menu.dart';
 import 'package:athlete_platform/widgets/circular_raised_button_with_text.dart';
 import 'package:athlete_platform/widgets/circular_text_form_field.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,6 +15,7 @@ class SignUpThird extends StatefulWidget {
 }
 
 class _SignUpThirdState extends State<SignUpThird> {
+  String _genderSelected = 'Gender';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -127,13 +129,29 @@ class _SignUpThirdState extends State<SignUpThird> {
                     ),
                   ),
                 ),
-                CircularTextFormField(
-                  hintText: 'Gender',
-                  borderColor: Colors.grey,
-                  textFieldColor: Colors.transparent,
-                  hintTextStyle: TextStyle(
-                    fontFamily: 'Muli',
-                  ),
+                CircularDropDownMenu(
+                  dropDownMenuItem: [
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('Male'),
+                      ),
+                      value: 'Male',
+                    ),
+                    DropdownMenuItem(
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Text('Female'),
+                      ),
+                      value: 'Female',
+                    ),
+                  ],
+                  onChanged: (value) {
+                    setState(() {
+                      _genderSelected = value;
+                    });
+                  },
+                  hintText: _genderSelected,
                 ),
                 SizedBox(
                   height: 40,

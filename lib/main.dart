@@ -19,6 +19,7 @@ import 'package:athlete_platform/screens/signupthird.dart';
 import 'package:athlete_platform/screens/splash.dart';
 import 'package:athlete_platform/screens/start_discussion.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'CreateEvent/createEvent.dart';
 import 'EventDetails/eventDetails.dart';
@@ -33,6 +34,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

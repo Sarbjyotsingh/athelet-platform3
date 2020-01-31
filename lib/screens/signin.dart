@@ -1,4 +1,5 @@
 import 'package:athlete_platform/screens/signup.dart';
+import 'package:athlete_platform/widgets/circular_password_text_form_field.dart';
 import 'package:athlete_platform/widgets/circular_raised_button_with_text.dart';
 import 'package:athlete_platform/widgets/circular_text_form_field.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,6 +13,9 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  Color _passwordIconColor = Colors.grey;
+  bool _toglePasswordIcon = true;
+  bool _hidePassword = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,13 +108,27 @@ class _SignInState extends State<SignIn> {
                     ),
                   ),
                 ),
-                CircularTextFormField(
+                CircularPasswordTextFormField(
                   hintText: 'Password',
                   borderColor: Colors.grey,
                   textFieldColor: Colors.transparent,
                   hintTextStyle: TextStyle(
                     fontFamily: 'Muli',
                   ),
+                  obscureText: _hidePassword,
+                  iconColor: _passwordIconColor,
+                  onIconPressed: () {
+                    setState(() {
+                      if (_toglePasswordIcon) {
+                        _hidePassword = false;
+                        _passwordIconColor = Colors.black;
+                      } else {
+                        _hidePassword = true;
+                        _passwordIconColor = Colors.grey;
+                      }
+                      _toglePasswordIcon = !_toglePasswordIcon;
+                    });
+                  },
                 ),
                 Container(
                   margin: const EdgeInsets.only(top: 10.0, bottom: 10.0),
