@@ -11,6 +11,46 @@ class DiscussionDetail extends StatefulWidget {
 }
 
 class _DiscussionDetailState extends State<DiscussionDetail> {
+  void _bottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return Container(
+          padding: EdgeInsets.all(10),
+          height: 140,
+          child: Column(
+            children: <Widget>[
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: ListTile(
+                    leading: Icon(Icons.edit),
+                    title: Text('Edit'),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: ListTile(
+                    leading: Icon(Icons.delete),
+                    title: Text('Delete'),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +66,27 @@ class _DiscussionDetailState extends State<DiscussionDetail> {
             Navigator.pop(context);
           },
         ),
+        title: Align(
+          alignment: Alignment.topLeft,
+          child: Text(
+            'Discussion title will go here',
+            style: TextStyle(
+              fontFamily: 'Muli',
+              fontWeight: FontWeight.w700,
+              fontSize: 18,
+              color: Colors.black
+            ),
+          ),
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.more_vert,
+              color: Colors.black,
+            ),
+            onPressed: _bottomSheet,
+          ),
+        ],
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
@@ -35,17 +96,6 @@ class _DiscussionDetailState extends State<DiscussionDetail> {
             padding: EdgeInsets.only(left: 13, right: 10),
             child: Column(
               children: <Widget>[
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    'Discussion title will go here',
-                    style: TextStyle(
-                      fontFamily: 'Muli',
-                      fontWeight: FontWeight.w700,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
                 SizedBox(
                   height: 3,
                 ),

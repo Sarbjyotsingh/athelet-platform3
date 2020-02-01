@@ -1,4 +1,9 @@
 import 'package:athlete_platform/screens/create_group.dart';
+import 'package:athlete_platform/screens/discussion_list.dart';
+import 'package:athlete_platform/screens/edit_group.dart';
+import 'package:athlete_platform/screens/group_detail_non_user_post.dart';
+import 'package:athlete_platform/screens/member_listing.dart';
+import 'package:athlete_platform/screens/member_listing_non_user_post.dart';
 import 'package:athlete_platform/screens/start_discussion.dart';
 import 'package:athlete_platform/utilities/hamburgermenu.dart';
 import 'package:athlete_platform/widgets/group_card.dart';
@@ -54,6 +59,7 @@ class _GroupListingState extends State<GroupListing> {
           fontFamily: 'Muli',
           fontSize: 16,
         ),
+        isScrollable: true,
         indicatorColor: Color(0xFFf01b01),
         tabs: [
           Tab(
@@ -62,6 +68,9 @@ class _GroupListingState extends State<GroupListing> {
           Tab(
             text: 'All Groups',
           ),
+          Tab(
+            text: 'Pending',
+          ),
         ],
       ),
     );
@@ -69,8 +78,76 @@ class _GroupListingState extends State<GroupListing> {
 
   @override
   Widget build(BuildContext context) {
+    void _bottomSheetUserPost() {
+      showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return Container(
+            padding: EdgeInsets.all(10),
+            height: 140,
+            child: Column(
+              children: <Widget>[
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.pushNamed(context, EditGroup.id);
+                  },
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: ListTile(
+                      leading: Icon(Icons.edit),
+                      title: Text('Edit'),
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: ListTile(
+                      leading: Icon(Icons.delete),
+                      title: Text('Delete'),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      );
+    }
+
+    void _bottomSheetNonUserPost() {
+      showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return Container(
+            padding: EdgeInsets.all(10),
+            height: 80,
+            child: Column(
+              children: <Widget>[
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: ListTile(
+                      title: Text('Report Abuse'),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      );
+    }
+
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         key: _scaffoldKey,
         drawer: hamburgerMenu(),
@@ -92,9 +169,14 @@ class _GroupListingState extends State<GroupListing> {
           elevation: 0,
           items: [
             BottomNavigationBarItem(
-              icon: Icon(
-                Icons.rss_feed,
-                size: 30,
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, 'feed');
+                },
+                child: Icon(
+                  Icons.rss_feed,
+                  size: 30,
+                ),
               ),
               title: SizedBox(),
             ),
@@ -137,20 +219,146 @@ class _GroupListingState extends State<GroupListing> {
                       SingleChildScrollView(
                         child: Column(
                           children: <Widget>[
-                            GroupCard(),
-                            GroupCard(),
-                            GroupCard(),
+                            GroupCard(
+                              postImage: AssetImage('images/detail_card.jpg'),
+                              postHeading:
+                                  '2019 Holiday 4\'s Beach Volleyball Tournament.',
+                              bottomSheet: _bottomSheetUserPost,
+                              onPressedGroup: () {
+                                Navigator.pushNamed(context, DiscussionList.id);
+                              },
+                              onPressedMember: () {
+                                Navigator.pushNamed(context, MemberListing.id);
+                              },
+                            ),
+                            GroupCard(
+                              postImage: AssetImage('images/detail_card.jpg'),
+                              postHeading:
+                                  '2019 Holiday 4\'s Beach Volleyball Tournament.',
+                              bottomSheet: _bottomSheetUserPost,
+                              onPressedGroup: () {
+                                Navigator.pushNamed(context, DiscussionList.id);
+                              },
+                              onPressedMember: () {
+                                Navigator.pushNamed(context, MemberListing.id);
+                              },
+                            ),
+                            GroupCard(
+                              postImage: AssetImage('images/detail_card.jpg'),
+                              postHeading:
+                                  '2019 Holiday 4\'s Beach Volleyball Tournament.',
+                              bottomSheet: _bottomSheetUserPost,
+                              onPressedGroup: () {
+                                Navigator.pushNamed(context, DiscussionList.id);
+                              },
+                              onPressedMember: () {
+                                Navigator.pushNamed(context, MemberListing.id);
+                              },
+                            ),
                           ],
                         ),
                       ),
                       SingleChildScrollView(
                         child: Column(
                           children: <Widget>[
-                            GroupCard(),
-                            GroupCard(),
-                            GroupCard(),
-                            GroupCard(),
-                            GroupCard(),
+                            GroupCard(
+                              postImage: AssetImage('images/detail_card.jpg'),
+                              postHeading:
+                                  '2019 Holiday 4\'s Beach Volleyball Tournament.',
+                              bottomSheet: _bottomSheetUserPost,
+                              onPressedGroup: () {
+                                Navigator.pushNamed(context, DiscussionList.id);
+                              },
+                              onPressedMember: () {
+                                Navigator.pushNamed(context, MemberListing.id);
+                              },
+                            ),
+                            GroupCard(
+                              postImage: AssetImage('images/center_card.jpg'),
+                              postHeading:
+                                  '2020 Holiday 1\'s Beach Volleyball Tournament.',
+                              bottomSheet: _bottomSheetNonUserPost,
+                              onPressedGroup: () {
+                                Navigator.pushNamed(
+                                    context, GroupDetailNonUserPost.id);
+                              },
+                              onPressedMember: () {
+                                Navigator.pushNamed(
+                                    context, MemberListingNonUserPost.id);
+                              },
+                            ),
+                            GroupCard(
+                              postImage: AssetImage('images/detail_card.jpg'),
+                              postHeading:
+                                  '2019 Holiday 4\'s Beach Volleyball Tournament.',
+                              bottomSheet: _bottomSheetUserPost,
+                              onPressedGroup: () {
+                                Navigator.pushNamed(context, DiscussionList.id);
+                              },
+                              onPressedMember: () {
+                                Navigator.pushNamed(context, MemberListing.id);
+                              },
+                            ),
+                            GroupCard(
+                              postImage: AssetImage('images/center_card.jpg'),
+                              postHeading:
+                                  '2020 Holiday 1\'s Beach Volleyball Tournament.',
+                              bottomSheet: _bottomSheetNonUserPost,
+                              onPressedGroup: () {
+                                Navigator.pushNamed(
+                                    context, GroupDetailNonUserPost.id);
+                              },
+                              onPressedMember: () {
+                                Navigator.pushNamed(
+                                    context, MemberListingNonUserPost.id);
+                              },
+                            ),
+                            GroupCard(
+                              postImage: AssetImage('images/detail_card.jpg'),
+                              postHeading:
+                                  '2019 Holiday 4\'s Beach Volleyball Tournament.',
+                              bottomSheet: _bottomSheetUserPost,
+                              onPressedGroup: () {
+                                Navigator.pushNamed(context, DiscussionList.id);
+                              },
+                              onPressedMember: () {
+                                Navigator.pushNamed(context, MemberListing.id);
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                      SingleChildScrollView(
+                        child: Column(
+                          children: <Widget>[
+                            GroupCard(
+                              postImage: AssetImage('images/center_card.jpg'),
+                              postHeading:
+                                  '2020 Holiday 1\'s Beach Volleyball Tournament.',
+                              bottomSheet: _bottomSheetNonUserPost,
+                              onPressedGroup: () {
+                                Navigator.pushNamed(
+                                    context, GroupDetailNonUserPost.id);
+                              },
+                              onPressedMember: () {
+                                Navigator.pushNamed(
+                                    context, MemberListingNonUserPost.id);
+                              },
+                            ),
+                            GroupCard(
+                              postImage: AssetImage('images/center_card.jpg'),
+                              postHeading:
+                                  '2020 Holiday 1\'s Beach Volleyball Tournament.',
+                              bottomSheet: _bottomSheetNonUserPost,
+                              onPressedGroup: () {
+                                Navigator.pushNamed(
+                                    context, GroupDetailNonUserPost.id);
+                              },
+                              onPressedMember: () {
+                                Navigator.pushNamed(
+                                    context, MemberListingNonUserPost.id);
+                              },
+                            ),
                           ],
                         ),
                       ),

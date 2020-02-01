@@ -9,7 +9,6 @@ class SplashScreen extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return new _SplashScreen();
   }
 }
@@ -17,7 +16,6 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreen extends State<SplashScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     redirectToOtherPage();
   }

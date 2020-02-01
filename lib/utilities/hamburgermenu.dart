@@ -5,7 +5,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class hamburgerMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Theme(
       data: Theme.of(context).copyWith(
         canvasColor: values.menuBackGroundColor,

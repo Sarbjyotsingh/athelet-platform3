@@ -1,11 +1,10 @@
+import 'package:athlete_platform/Core/values.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:athlete_platform/Core/values.dart';
 
 class eventDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
       home: Scaffold(
         body: SingleChildScrollView(

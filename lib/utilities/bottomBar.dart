@@ -1,10 +1,10 @@
+import 'package:athlete_platform/screens/group_listing.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return new _BottomBar();
   }
 }
@@ -12,7 +12,6 @@ class BottomBar extends StatefulWidget {
 class _BottomBar extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       backgroundColor: Color(0xFFf5f5f5),
@@ -20,9 +19,12 @@ class _BottomBar extends State<BottomBar> {
       elevation: 0,
       items: [
         BottomNavigationBarItem(
-          icon: Icon(
-            Icons.rss_feed,
-            size: 30,
+          icon: GestureDetector(
+            onTap: () {},
+            child: Icon(
+              Icons.rss_feed,
+              size: 30,
+            ),
           ),
           title: SizedBox(),
         ),
@@ -41,9 +43,14 @@ class _BottomBar extends State<BottomBar> {
           title: SizedBox(),
         ),
         BottomNavigationBarItem(
-          icon: Icon(
-            Icons.group_work,
-            size: 30,
+          icon: GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, GroupListing.id);
+            },
+            child: Icon(
+              Icons.group_work,
+              size: 30,
+            ),
           ),
           title: SizedBox(),
         ),

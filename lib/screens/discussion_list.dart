@@ -1,4 +1,5 @@
 import 'package:athlete_platform/screens/discussion_detail.dart';
+import 'package:athlete_platform/screens/group_details.dart';
 import 'package:athlete_platform/screens/start_discussion.dart';
 import 'package:athlete_platform/widgets/discussion_card.dart';
 import 'package:athlete_platform/widgets/memeber_detail_card.dart';
@@ -12,6 +13,74 @@ class DiscussionList extends StatefulWidget {
 }
 
 class _DiscussionListState extends State<DiscussionList> {
+  void _bottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return Container(
+          padding: EdgeInsets.all(10),
+          height: 140,
+          child: Column(
+            children: <Widget>[
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: ListTile(
+                    leading: Icon(Icons.edit),
+                    title: Text('Edit'),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: ListTile(
+                    leading: Icon(Icons.delete),
+                    title: Text('Delete'),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  void _bottomSheetGroupInfo() {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return Container(
+          padding: EdgeInsets.all(10),
+          height: 80,
+          child: Column(
+            children: <Widget>[
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, GroupDetails.id);
+                },
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: ListTile(
+                    title: Text('Group Info'),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +101,6 @@ class _DiscussionListState extends State<DiscussionList> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         leading: GestureDetector(
           child: Icon(
             Icons.keyboard_backspace,
@@ -43,6 +111,24 @@ class _DiscussionListState extends State<DiscussionList> {
             Navigator.pop(context);
           },
         ),
+        title: Text(
+          '2019 Holiday 4\'s Beach Volleyball Tournament.',
+          style: TextStyle(
+            fontSize: 18,
+            fontFamily: 'Muli',
+            fontWeight: FontWeight.w700,
+            color: Colors.black,
+          ),
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.more_vert,
+              color: Colors.black,
+            ),
+            onPressed: _bottomSheetGroupInfo,
+          ),
+        ],
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
@@ -52,14 +138,6 @@ class _DiscussionListState extends State<DiscussionList> {
             padding: EdgeInsets.only(left: 10, right: 10),
             child: Column(
               children: <Widget>[
-                Text(
-                  '2019 Holiday 4\'s Beach Volleyball Tournament.',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontFamily: 'Muli',
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
                 MemberDetailCard(
                   title: 'Dan Walker (Host)',
                   backgroundImage: AssetImage(

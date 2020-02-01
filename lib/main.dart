@@ -3,12 +3,16 @@ import 'package:athlete_platform/screens/SignupFifth.dart';
 import 'package:athlete_platform/screens/SignupSixth.dart';
 import 'package:athlete_platform/screens/create_group.dart';
 import 'package:athlete_platform/screens/discussion_detail.dart';
+import 'package:athlete_platform/screens/discussion_detail_non_user_post.dart';
 import 'package:athlete_platform/screens/discussion_list.dart';
+import 'package:athlete_platform/screens/discussion_list_non_user_post.dart';
 import 'package:athlete_platform/screens/edit_group.dart';
+import 'package:athlete_platform/screens/group_detail_non_user_post.dart';
 import 'package:athlete_platform/screens/group_details.dart';
 import 'package:athlete_platform/screens/group_listing.dart';
 import 'package:athlete_platform/screens/invite_member.dart';
 import 'package:athlete_platform/screens/member_listing.dart';
+import 'package:athlete_platform/screens/member_listing_non_user_post.dart';
 import 'package:athlete_platform/screens/menu_bar.dart';
 import 'package:athlete_platform/screens/post.dart';
 import 'package:athlete_platform/screens/signin.dart';
@@ -70,6 +74,11 @@ class _MyAppState extends State<MyApp> {
         "eventDetails": (context) => eventDetails(),
         SignUpSixth.id: (context) => SignUpSixth(),
         StartDiscussion.id: (context) => StartDiscussion(),
+        MemberListingNonUserPost.id: (context) => MemberListingNonUserPost(),
+        GroupDetailNonUserPost.id: (context) => GroupDetailNonUserPost(),
+        DiscussionListNonUserPost.id: (context) => DiscussionListNonUserPost(),
+        DiscussionDetailsNonUserPost.id: (context) =>
+            DiscussionDetailsNonUserPost(),
       },
     );
   }

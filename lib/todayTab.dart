@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:athlete_platform/Core/values.dart';
+import 'package:flutter/material.dart';
 
 import 'editEvent/editEvent.dart';
 
@@ -7,7 +7,6 @@ class todayTab extends StatefulWidget {
   List eventList = new List();
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return new _todaysTab();
   }
 }

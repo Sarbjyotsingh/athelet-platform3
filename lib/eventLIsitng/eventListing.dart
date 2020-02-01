@@ -1,16 +1,15 @@
 import 'package:athlete_platform/Core/headingBar.dart';
+import 'package:athlete_platform/Core/values.dart';
 import 'package:athlete_platform/utilities/bottomBar.dart';
 import 'package:athlete_platform/utilities/hamburgermenu.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:athlete_platform/Core/values.dart';
 
 import '../todayTab.dart';
 
 class EventListing extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return new _EventListing();
   }
 }
@@ -18,7 +17,6 @@ class EventListing extends StatefulWidget {
 class _EventListing extends State<EventListing> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       body: DefaultTabController(
           length: 3,

@@ -1,3 +1,4 @@
+import 'package:athlete_platform/screens/group_listing.dart';
 import 'package:athlete_platform/screens/post.dart';
 import 'package:athlete_platform/utilities/bottomBar.dart';
 import 'package:athlete_platform/utilities/hamburgermenu.dart';
@@ -15,18 +16,27 @@ class _FeedPageState extends State<FeedPage> {
 
   Widget buildBottomAppBar() {
     return BottomAppBar(
-        child: Container(
-      height: 40,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          Icon(FontAwesomeIcons.wifi),
-          Icon(FontAwesomeIcons.chartPie),
-          Icon(FontAwesomeIcons.calendarCheck),
-          Icon(FontAwesomeIcons.ggCircle)
-        ],
+      child: Container(
+        height: 40,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            GestureDetector(
+              onTap: () {},
+              child: Icon(FontAwesomeIcons.wifi),
+            ),
+            Icon(FontAwesomeIcons.chartPie),
+            Icon(FontAwesomeIcons.calendarCheck),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, GroupListing.id);
+              },
+              child: Icon(FontAwesomeIcons.ggCircle),
+            ),
+          ],
+        ),
       ),
-    ));
+    );
   }
 
   Widget buildAppBar() {
