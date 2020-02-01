@@ -4,7 +4,6 @@ import 'package:athlete_platform/screens/invite_member.dart';
 import 'package:athlete_platform/screens/member_listing.dart';
 import 'package:athlete_platform/widgets/ButtonWithUnderline.dart';
 import 'package:athlete_platform/widgets/member_images.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class GroupDetails extends StatefulWidget {
@@ -166,12 +165,16 @@ class _GroupDetailsState extends State<GroupDetails> {
                         children: <Widget>[
                           Column(
                             children: <Widget>[
-                              Text(
-                                '2019 Holiday 4\'s Beach Volleyball Tournament.',
-                                style: TextStyle(
-                                  fontSize: 24,
-                                  fontFamily: 'Muli',
-                                  fontWeight: FontWeight.w700,
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  'Volleyball for All',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 24,
+                                    fontFamily: 'Muli',
+                                    fontWeight: FontWeight.w700,
+                                  ),
                                 ),
                               ),
                               ListTile(
@@ -214,22 +217,22 @@ class _GroupDetailsState extends State<GroupDetails> {
                                   children: <TextSpan>[
                                     TextSpan(
                                       text:
-                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur',
+                                          'The site specializes in volleyball (exercises, analysis, technique, tactics, positions play, game news, discussion, the opinions of the trainers) Thank you for your presence at the site Greetings to you.',
                                       style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400,
                                       ),
                                     ),
-                                    TextSpan(
-                                      text: ' Read More',
-                                      style: TextStyle(
-                                        decoration: TextDecoration.underline,
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                      recognizer: TapGestureRecognizer()
-                                        ..onTap =
-                                            () => print('Read More Clicked'),
-                                    ),
+//                                    TextSpan(
+//                                      text: ' Read More',
+//                                      style: TextStyle(
+//                                        decoration: TextDecoration.underline,
+//                                        fontWeight: FontWeight.w700,
+//                                      ),
+//                                      recognizer: TapGestureRecognizer()
+//                                        ..onTap =
+//                                            () => print('Read More Clicked'),
+//                                    ),
                                   ],
                                 ),
                               ),

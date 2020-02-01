@@ -1,4 +1,0 @@
-#Sat Feb 01 01:21:25 IST 2020
-base.0=/home/sarbjyot/Desktop/athelet-platform3/build/app/intermediates/dex/release/mergeDexRelease/out/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

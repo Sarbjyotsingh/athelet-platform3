@@ -71,11 +71,10 @@ class _DiscussionDetailState extends State<DiscussionDetail> {
           child: Text(
             'Discussion title will go here',
             style: TextStyle(
-              fontFamily: 'Muli',
-              fontWeight: FontWeight.w700,
-              fontSize: 18,
-              color: Colors.black
-            ),
+                fontFamily: 'Muli',
+                fontWeight: FontWeight.w700,
+                fontSize: 18,
+                color: Colors.black),
           ),
         ),
         actions: <Widget>[
@@ -122,6 +121,7 @@ class _DiscussionDetailState extends State<DiscussionDetail> {
                     color: Colors.grey.shade300.withOpacity(0.3),
                   ),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       TextFormField(
@@ -179,25 +179,25 @@ class _DiscussionDetailState extends State<DiscussionDetail> {
                   ),
                   userName: 'Me',
                   userDescription: 'Coach, Consultant (Univerity of ...',
-                  discussionTitle: 'Discussion title will go here ...',
+                  discussionTitle: 'Who want to join our volleyball team?',
                   discussionDescription:
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ',
+                      'Here is the chance for you all to join our volleyball team who all are intrested can share their numbers in the comments below. ',
                   onPressed: () {
                     Navigator.pushNamed(context, DiscussionDetail.id);
                   },
                 ),
                 ReplyCommentWidget(
-                  userName: 'Me',
-                  userDescription: 'Coach, Consultant...',
-                  userComment: 'Lorem ipsum dolor sit amet.',
+                  userName: 'Rene',
+                  userDescription: 'Athelete',
+                  userComment: 'I want to join the team ',
                   userImage: AssetImage(
-                    'images/person1.jpg',
+                    'images/person2.jpg',
                   ),
                 ),
                 ReplyCommentWidget(
                   userName: 'Me',
                   userDescription: 'Coach, Consultant...',
-                  userComment: 'Lorem ipsum dolor sit amet.',
+                  userComment: 'Can you please share your email id.',
                   userImage: AssetImage(
                     'images/person1.jpg',
                   ),

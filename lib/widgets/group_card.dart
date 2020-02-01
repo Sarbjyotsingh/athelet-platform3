@@ -61,15 +61,19 @@ class GroupCard extends StatelessWidget {
           SizedBox(
             height: 15,
           ),
-          GestureDetector(
-            onTap: onPressedGroup,
-            child: Text(
-              postHeading,
-              style: TextStyle(
-                fontSize: 17,
-                fontFamily: 'Muli',
-                fontWeight: FontWeight.w700,
-                color: Color(0xFF555555),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: GestureDetector(
+              onTap: onPressedGroup,
+              child: Text(
+                postHeading,
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontSize: 17,
+                  fontFamily: 'Muli',
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF555555),
+                ),
               ),
             ),
           ),

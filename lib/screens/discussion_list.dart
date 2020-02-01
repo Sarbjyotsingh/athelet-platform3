@@ -112,7 +112,8 @@ class _DiscussionListState extends State<DiscussionList> {
           },
         ),
         title: Text(
-          '2019 Holiday 4\'s Beach Volleyball Tournament.',
+          'Volleyball for All',
+          textAlign: TextAlign.left,
           style: TextStyle(
             fontSize: 18,
             fontFamily: 'Muli',
@@ -164,9 +165,9 @@ class _DiscussionListState extends State<DiscussionList> {
                   ),
                   userName: 'Me',
                   userDescription: 'Coach, Consultant (Univerity of ...',
-                  discussionTitle: 'Discussion title will go here ...',
+                  discussionTitle: 'Who want to join our volleyball team?',
                   discussionDescription:
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ',
+                      'Here is the chance for you all to join our volleyball team who all are intrested can share their numbers in the comments below. ',
                   onPressed: () {
                     Navigator.pushNamed(context, DiscussionDetail.id);
                   },
@@ -177,9 +178,10 @@ class _DiscussionListState extends State<DiscussionList> {
                   ),
                   userName: 'Me',
                   userDescription: 'Coach, Consultant (Univerity of ...',
-                  discussionTitle: 'Discussion title will go here ...',
+                  discussionTitle:
+                      'There is a free traning session on our ground.',
                   discussionDescription:
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ',
+                      'We are organising a free training session who all are intrested can share their details in the comments we will share the venue and location to them. ',
                   onPressed: () {
                     Navigator.pushNamed(context, DiscussionDetail.id);
                   },
@@ -190,9 +192,9 @@ class _DiscussionListState extends State<DiscussionList> {
                   ),
                   userName: 'Me',
                   userDescription: 'Coach, Consultant (Univerity of ...',
-                  discussionTitle: 'Discussion title will go here ...',
+                  discussionTitle: ' Volleyball Playing Tips',
                   discussionDescription:
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ',
+                      'What if I told you there could be a simple fix that would make your volleyball setting twice as good in just one practice session, would you be interested?  ',
                   onPressed: () {
                     Navigator.pushNamed(context, DiscussionDetail.id);
                   },
@@ -203,22 +205,10 @@ class _DiscussionListState extends State<DiscussionList> {
                   ),
                   userName: 'Me',
                   userDescription: 'Coach, Consultant (Univerity of ...',
-                  discussionTitle: 'Discussion title will go here ...',
+                  discussionTitle:
+                      ' Second episode of the new volleyball podcast is up!',
                   discussionDescription:
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ',
-                  onPressed: () {
-                    Navigator.pushNamed(context, DiscussionDetail.id);
-                  },
-                ),
-                DiscussionCard(
-                  userImage: AssetImage(
-                    'images/person1.jpg',
-                  ),
-                  userName: 'Me',
-                  userDescription: 'Coach, Consultant (Univerity of ...',
-                  discussionTitle: 'Discussion title will go here ...',
-                  discussionDescription:
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ',
+                      'Watch the all new episode of volleyball podcast ad share your views in the comments.',
                   onPressed: () {
                     Navigator.pushNamed(context, DiscussionDetail.id);
                   },

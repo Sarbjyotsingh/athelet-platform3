@@ -221,8 +221,7 @@ class _GroupListingState extends State<GroupListing> {
                           children: <Widget>[
                             GroupCard(
                               postImage: AssetImage('images/detail_card.jpg'),
-                              postHeading:
-                                  '2019 Holiday 4\'s Beach Volleyball Tournament.',
+                              postHeading: 'Volleyball for All',
                               bottomSheet: _bottomSheetUserPost,
                               onPressedGroup: () {
                                 Navigator.pushNamed(context, DiscussionList.id);
